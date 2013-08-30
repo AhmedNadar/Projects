@@ -21,7 +21,7 @@ end
 start = 1
 print "We start with 2 as the first prime number\n"
 response = "Y"
-while response[0].downcase == "y"
+while response.downcase[0] == "y"
 	start = next_prime_greater_than(start)
 	puts start
 	print "Do you want the next prime? (Y/N)\n"
