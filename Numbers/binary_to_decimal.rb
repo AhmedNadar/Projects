@@ -14,13 +14,25 @@ def decimal_to_binary(num)
 	end
 	return binary
 end
+
+def binary_to_decimal(binary)
+	array = binary.split("")
+	decimal = 0
+	array.each do |n|
+		decimal = decimal * 2 + n.to_i
+	end
+	return decimal
+end
+
 print "Is your number currently decimal or binary? (B/D) : "
 current = gets.strip
-if current.downcase[0] = "d"
+if current.downcase[0] == "d"
 	print "Enter the decimal number to convert to binary : "
 	number = gets.strip.to_i
 	printf("\nThe binary version of this number is: #{decimal_to_binary(number)}\n")
-elsif current[0].downcase = "b"
+elsif current[0].downcase == "b"
 	print "Enter the binary number to convert to decimal : "
+	binary = gets.strip
+	printf("\nThe decimal version of this number is: #{binary_to_decimal(binary)}\n")
 else puts "You gotta choose one...start the program over and try again"
 end
