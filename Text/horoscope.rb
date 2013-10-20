@@ -1,3 +1,5 @@
+#uses nokogiri to pull horoscope from horoscope.com
+
 require 'nokogiri'
 require 'open-uri'
 
