@@ -1,5 +1,6 @@
 def palindrome?(string)
 	#in ruby, we can just see if string.reverse == string. but let's try harder than that, shall we?
+	#return string.reverse == string
 	f = 0
 	l = string.size - 1
 	until l <= f
