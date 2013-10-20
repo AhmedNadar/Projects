@@ -12,8 +12,9 @@ change = {}
 
 coins.each do |key, value|
 	counter = 0
-	while (change_due > value)
+	while (change_due >= value)
 		change_due -= value
+		change_due = change_due.round(2)
 		counter += 1
 	end
 	change[key] = counter
