@@ -1,6 +1,8 @@
 require 'nokogiri'
 require 'open-uri'
 
+#uses nokogiri to pull horoscope from horoscope.com
+
 puts "What's your horoscope sign? Enter your zodiac: "
 sign = gets.strip
 
