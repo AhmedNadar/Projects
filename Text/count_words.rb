@@ -1,6 +1,6 @@
 def word_count(string)
-	string.gsub!(/\W/, ' ')
-	string.split(" ").length
+  string.gsub!(/\W/, ' ')
+  string.split(" ").length
 end
 
 #String input
@@ -13,6 +13,6 @@ puts "Where is the file? "
 filepath = gets.strip
 totalwords = 0
 IO.foreach(filepath) do |line|
-	totalwords += word_count(line)
+  totalwords += word_count(line)
 end
 puts "There are #{totalwords} words in the file"

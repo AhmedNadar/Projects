@@ -11,17 +11,17 @@ coins = { "dollars" => 1.00, "quarters" => 0.25, "dimes" => 0.10, "nickels" => 0
 change = {}
 
 coins.each do |key, value|
-	counter = 0
-	while (change_due >= value)
-		change_due -= value
-		change_due = change_due.round(2)
-		counter += 1
-	end
-	change[key] = counter
+  counter = 0
+  while (change_due >= value)
+    change_due -= value
+    change_due = change_due.round(2)
+    counter += 1
+  end
+  change[key] = counter
 end
 
 print "\nIn coins, we're giving you the following as change : "
 change.each do |key, value|
-	printf("\n#{key} - %.0f", value)
+  printf("\n#{key} - %.0f", value)
 end
 print "\n"
